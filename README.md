@@ -20,6 +20,7 @@ Unblock the files:
 ```PowerShell
 Get-ChildItem -Path .\SillyScripts -Recurse -Include *.ps1 | Unblock-File
 ```
+You should carefully read and understand any scripts you obtain from the internet, especially before unblocking them on your machine. Please be silly responsibly.
 
 The scripts are provided as functions, so you can import them into your PowerShell session as you desire and call them by their function names:
 ```PowerShell
