@@ -18,9 +18,13 @@ function Test-Friday {
     begin {}
 
     process {
-        switch ( (Get-Date).DayOfWeek -eq [DayOfWeek]::Friday ) {
+        switch ( [DateTime]::Today.DayOfWeek.Equals( [DayOfWeek]::Friday ) ) {
             $true {
-                Write-Output "🎉"
+                if ( [DateTime]::Today.Day -eq 13 ) { # Friday the 13th easter egg
+                    Write-Output "😨"
+                } else {
+                    Write-Output "🎉"
+                }
             }
             $false {
                 Write-Output "😭"
